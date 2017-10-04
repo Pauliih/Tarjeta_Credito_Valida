@@ -14,13 +14,13 @@ TO DO:
 - Pedir num de tarjeta de credito al usuario. 			:)
 - Pasar los numeros en orden inverso a un array.		:)
 - Multiplicar por 2, los números de las posiciones pares, si el resultado de ese numero 
-  es mayor o igual a 10, debemos sumar los digitos de ese resultado.
-- Sumar todos los digitos y nuevos digitos.
+  es mayor o igual a 10, debemos sumar los digitos de ese resultado.	:)
+- Sumar todos los digitos y nuevos digitos.  			:)
 - El resultado de la suma debemos obtener el residuo de la división por 10, si es 0 es 
-  una tarjeta de crédito válida (Comprobar si es una tarjeta válida).
+  una tarjeta de crédito válida (Comprobar si es una tarjeta válida).	:)
 
-suma módulo 10 debe ser igual a cero:
-numSum % 10 =0
+*suma módulo 10 debe ser igual a cero:
+ numSum % 10 =0
 
 ############################################################################################*/
 function isValidCard(option){
@@ -45,17 +45,17 @@ function isValidCard(option){
 				numInv[i]=inPair; //Modifico el número en su misma posición        		
 			}
 			numInv[i]=inPair;//Modifico el número en su misma posición 
-			console.log(inPair);
-			console.log(numInv);
 		}
+		
 		var sumArray=0;
 		for (var i = 0; i < numInv.length; i++) { //sumar todos los elementos de  un array
 			sumArray+=numInv[i];
 		}
-		return console.log(sumArray);
-
+		if(sumArray%10==0){ //Si el resto de la suma es 0, la tarjeta es válida
+			return alert("Tu tarjeta de crédito es válida! :)");
+		}
+		return alert("Tu tarjeta de crédito NO es válida!!");
     }
 }
 
-//HacerALGO
 isValidCard();
