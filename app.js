@@ -11,8 +11,8 @@ Tu código debe estar compuesto por 1 función: isValidCard
 El usuario no debe poder ingresar un campo vacío.
 
 TO DO:
-- Pedir num de tarjeta de credito al usuario.
-- Pasar los numeros en orden inverso a un array.
+- Pedir num de tarjeta de credito al usuario. 			:)
+- Pasar los numeros en orden inverso a un array.		:)
 - Multiplicar por 2, los números de las posiciones pares, si el resultado de ese numero 
   es mayor o igual a 10, debemos sumar los digitos de ese resultado.
 - Sumar todos los digitos y nuevos digitos.
@@ -23,41 +23,37 @@ suma módulo 10 debe ser igual a cero:
 numSum % 10 =0
 
 ############################################################################################*/
-/*function isValidCard(option){
-		do{
-		var cardNum = prompt("Indique el número de su tarjeta de crédito:");
-		var cardNum = parseInt(cardNum);
-		var numInver=[];
-
-
-		if(cardNum != "" || typeof cardNum == "number"){
-			
-			
-		}else {
-				alert("Ingrese un número de tarjeta válido");
-	} while (cardNum == "" || (cardNum != "1" && cardNum != "2"));
-}
-
-//HacerALGO
-isValidCard();
-*/
 function isValidCard(option){
-	//	do{
-		var cardNum = prompt("Indique el número de su tarjeta de crédito:","");
-		//var cardNum = parseInt(cardNum);
-		var numInv=[];
-		var inv=0;
+	
+	var cardNum = prompt("Indique el número de su tarjeta de crédito:","");
+	var numInv=[];//Array para meter los numeros a la inversa
 		
-
-    if(cardNum == "" || isNaN(cardNum)){
+    if(cardNum == "" || isNaN(cardNum)){ //Revisa que el dato ingresado esté vacío y no sea número
         alert("Ingrese un número de tarjeta válido");
-    }else{
-        for (var i = cardNum.length - 1; i >= 0; i--) {
-				inv=parseInt(cardNum.charAt(i));
-
-				numInv.push(inv);
-				console.log(numInv);
+    }else{ //si no se cumple la condicion anterior
+        for (var i = cardNum.length - 1; i >= 0; i--){ //recorre el string ingresado de atrás hacia delante
+				var inv=parseInt(cardNum.charAt(i));//Convierte cada string a number
+				numInv.push(inv); //va ingresando cada número al array
 		}
+		
+		for (var i = 1; i < numInv.length; i+=2) { //Accede a los numeros en posiciones pares
+			inPair=numInv[i]*2; //los multiplico por 2
+			if(inPair>=10){ //si son mayores o iguales que 10, sumo sus digitos
+				num1=inPair%10;
+				num2=parseInt(inPair/10);
+				inPair=num1+num2;
+				numInv[i]=inPair; //Modifico el número en su misma posición        		
+			}
+			numInv[i]=inPair;//Modifico el número en su misma posición 
+			console.log(inPair);
+			console.log(numInv);
+		}
+		var sumArray=0;
+		for (var i = 0; i < numInv.length; i++) { //sumar todos los elementos de  un array
+			sumArray+=numInv[i];
+		}
+		return console.log(sumArray);
+
     }
 }
 
