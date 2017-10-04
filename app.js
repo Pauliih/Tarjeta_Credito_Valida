@@ -23,23 +23,42 @@ suma módulo 10 debe ser igual a cero:
 numSum % 10 =0
 
 ############################################################################################*/
-function isValidCard(option){
+/*function isValidCard(option){
 		do{
-		var respuesta = prompt("Indique el número de su tarjeta de crédito:");
-		var respuesta = parseInt(respuesta);
-		var numInvertidos=[];
+		var cardNum = prompt("Indique el número de su tarjeta de crédito:");
+		var cardNum = parseInt(cardNum);
+		var numInver=[];
+
+
+		if(cardNum != "" || typeof cardNum == "number"){
+			
+			
+		}else {
+				alert("Ingrese un número de tarjeta válido");
+	} while (cardNum == "" || (cardNum != "1" && cardNum != "2"));
+}
+
+//HacerALGO
+isValidCard();
+*/
+function isValidCard(option){
+	//	do{
+		var cardNum = prompt("Indique el número de su tarjeta de crédito:","");
+		//var cardNum = parseInt(cardNum);
+		var numInv=[];
+		var inv=0;
 		
 
-		if(respuesta != ""){
-			if(respuesta == "1") {
-				//HacerALGO
-			} else if (respuesta == "2") {
-				//HacerALGO
-			} else {
-				alert("Ingrese un número de tarjeta válido");
-			}
+    if(cardNum == "" || isNaN(cardNum)){
+        alert("Ingrese un número de tarjeta válido");
+    }else{
+        for (var i = cardNum.length - 1; i >= 0; i--) {
+				inv=parseInt(cardNum.charAt(i));
+
+				numInv.push(inv);
+				console.log(numInv);
 		}
-	} while (respuesta == "" || (respuesta != "1" && respuesta != "2"));
+    }
 }
 
 //HacerALGO
