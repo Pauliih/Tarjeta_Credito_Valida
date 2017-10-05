@@ -60,3 +60,5 @@ function isValidCard(option){
 
 	isValidCard();
 
+##Diagrama de flujo
+![Texto alternativo](https://github.com/Pauliih/Tarjeta_Credito_Valida/blob/master/Diagrama%20flujo%20CreditCard.png "Diagrama de Flujo de tarjeta de crédito")
