@@ -1,17 +1,11 @@
-/*
-2. Tarjeta de crédito válida
+#Mi código
 
-Crea una web que pida, por medio de un prompt(), el número de una tarjeta de crédito y 
-confirme su validez según el algoritmo de Luhn. Lee este blog que explica cómo funciona 
-el algoritmo de Luhn.
+Este código está compuesto por una función llamada isValidCard()
+Se pide el número de tarjeta de crédito al usuario, por medio de un prompt
+Se valida que el usuario no pueda ingresar un campo vacío ni que contenga letras.
 
-Consideraciones Específicas
 
-Tu código debe estar compuesto por 1 función: isValidCard
-El usuario no debe poder ingresar un campo vacío.
-
-TO DO:
-- Pedir num de tarjeta de credito al usuario. 			:)
+ Pedir num de tarjeta de credito al usuario. 			:)
 - Pasar los numeros en orden inverso a un array.		:)
 - Multiplicar por 2, los números de las posiciones pares, si el resultado de ese numero 
   es mayor o igual a 10, debemos sumar los digitos de ese resultado.	:)
@@ -21,15 +15,17 @@ TO DO:
 
 *suma módulo 10 debe ser igual a cero:
  numSum % 10 =0
+ 	
+####Este archivo es la versión `0.0.1`
+@author Paula Campos
 
- ############################################################################################*/
- function isValidCard(option){
+
+function isValidCard(option){
 
  	do{	
  		var cardNum = prompt("Indique el número de su tarjeta de crédito:","");
-/* (/^\s+$/.test(msg)) obliga a que el valor introducido por el usuario no sólo esté 
-		formado por espacios en blanco.*/
- 	}while(cardNum === "" || cardNum === null  ||  /^\s+$/.test(cardNum) || isNaN(cardNum));
+
+ 	}while(cardNum === "" || cardNum === null  ||  cardNum === " " || isNaN(cardNum));
 
 		var numInv=[];//Array para meter los numeros a la inversa
 	/*if(cardNum == ""){
@@ -63,3 +59,4 @@ TO DO:
 	}
 
 	isValidCard();
+
