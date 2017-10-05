@@ -16,8 +16,7 @@ Se valida que el usuario no pueda ingresar un campo vacío ni que contenga letra
 *suma módulo 10 debe ser igual a cero:
  numSum % 10 =0
  	
-####Este archivo es la versión `0.0.1`
-@author Paula Campos
+
 
 
 function isValidCard(option){
@@ -60,5 +59,6 @@ function isValidCard(option){
 
 	isValidCard();
 
-##Diagrama de flujo
-![Texto alternativo](https://github.com/Pauliih/Tarjeta_Credito_Valida/blob/master/Diagrama%20flujo%20CreditCard.png "Diagrama de Flujo de tarjeta de crédito")
+![##Diagrama de Flujo](https://github.com/Pauliih/Tarjeta_Credito_Valida/blob/master/Diagrama%20flujo%20CreditCard.png "Diagrama de Flujo de tarjeta de crédito")
+####Este archivo es la versión `0.0.1`
+@author Paula Campos
